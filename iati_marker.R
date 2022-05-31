@@ -50,7 +50,7 @@ while(length(docs)==1000){
   message(length(docs))
 }
 
-filename = paste0("budgets-",Sys.time())
+filename = paste0("budgets-",Sys.Date(),format(Sys.time(),"-", format = "%H"))
 saveRDS(results_list, file=paste0(filename,".RData"))
 
 # We now have a dataset of iati-identifiers with their budget information for all budgets 2021 onwards.
