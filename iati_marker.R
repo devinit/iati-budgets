@@ -6,8 +6,8 @@ rm(list.of.packages,new.packages)
 
 # Note: You will need to create your own account at https://developer.iatistandard.org/ and create a .env file.
 
-load_dot_env()
-api_key = Sys.getenv("API_KEY")
+# load_dot_env()
+api_key = Sys.getenv("PA_TOKEN")
 
 results_list = list()
 results_index = 1

@@ -10,7 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - uses: actions/checkout@v2
+
+      -name: set env
+        run: |
+          echo "HOST=${{ secrets.PA_TOKEN }}" >> $GITHUB_ENV
 
       - uses: r-lib/actions/setup-r@master
         with:
