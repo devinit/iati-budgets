@@ -1,4 +1,4 @@
-list.of.packages <- c("data.table","dotenv", "httr", "dplyr")
+list.of.packages <- c("data.table","dotenv", "dplyr")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 lapply(list.of.packages, require, character.only=T)
@@ -6,6 +6,7 @@ rm(list.of.packages,new.packages)
 
 # Note: You will need to create your own account at https://developer.iatistandard.org/ and create a .env file.
 
+# setwd("C:/git/iati-budgets")
 # load_dot_env()
 api_key = Sys.getenv("PA_TOKEN")
 
