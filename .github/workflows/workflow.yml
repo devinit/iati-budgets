@@ -20,6 +20,7 @@ jobs:
           install.packages('dotenv')
           install.packages('httr')
           install.packages('dplyr')
+          install.packages('rstudioapi')
       - name: Run budget data script
         run: |
           source("iati_marker.R")
