@@ -3,7 +3,7 @@ name: Take a snapshot of budget data
 on:
   # Run every hour 
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/10 * * * *"
 
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
           path: ${{ env.R_LIBS_USER }}
           key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
-          
+
       - name: Install dependencies
         run: |
           remotes::install_deps(dependencies = TRUE)
