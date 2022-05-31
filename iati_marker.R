@@ -26,7 +26,7 @@ api_url_base = paste0(
   "q=budget_period_start_iso_date:[2021-01-01T00:00:00Z TO *]",
   #"AND reporting_org_ref:(\"GB-GOv-1\")", # Can include a specific reporter if wanted.
   "&",
-  "fl=budget_* iati_identifier &wt=json&",
+  "fl=budget_* iati_identifier reporting_org_ref &wt=json&",
   "sort=iati_identifier asc&",
   "rows=1000&start="
 )
