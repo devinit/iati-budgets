@@ -1,7 +1,7 @@
 name: Take a snapshot of budget data
 
 on:
-  # Run every X 
+  # Run every hour 
   schedule:
     - cron: "0 * * * *"
 
