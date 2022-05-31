@@ -3,7 +3,7 @@ name: Take a snapshot of budget data
 on:
   # Run every hour 
   schedule:
-    - cron: "*/10 * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   generate-data:
@@ -15,7 +15,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-        sudo apt-get install libcurl4-openssl-dev
+          sudo apt-get install libcurl4-openssl-dev
 
       - name: set env
         run: |
