@@ -3,7 +3,7 @@ name: Take a snapshot of budget data
 on:
   # Run every hour 
   schedule:
-    - cron: "0 * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   build:

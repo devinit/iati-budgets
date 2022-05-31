@@ -40,7 +40,7 @@ while(length(docs)==1000){
   res = content(req)
   docs = res$response$docs
   
-  
+  filename = paste0("budgets-",Sys.Date(),"-",format(Sys.time(),"-", format = "%H"),"-", format(Sys.time(),"-", format = "%M"))
   for (index in c((start_num+1):(start_num+1000))){
   if ((index-start_num)<=length(docs)){
   results_list[[index]] = docs[[index-start_num]]
@@ -50,7 +50,7 @@ while(length(docs)==1000){
   message(length(docs))
 }
 
-filename = paste0("budgets-",Sys.Date(),format(Sys.time(),"-", format = "%H"))
+
 saveRDS(results_list, file=paste0(filename,".RData"))
 
 # We now have a dataset of iati-identifiers with their budget information for all budgets 2021 onwards.
