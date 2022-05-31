@@ -39,7 +39,7 @@ while(length(docs)==1000){
   res = content(req)
   docs = res$response$docs
   
-  filename = paste0("budgets-",Sys.Date(),"-",format(Sys.time(),"-", format = "%H"),"-", format(Sys.time(),"-", format = "%M"))
+  filename = paste0("budgets-",Sys.Date())
   for (index in c((start_num+1):(start_num+1000))){
   if ((index-start_num)<=length(docs)){
   results_list[[index]] = docs[[index-start_num]]
