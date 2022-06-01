@@ -20,7 +20,7 @@ jobs:
 
       - name: set env
         run: |
-          echo "HOST=${{ secrets.PA_TOKEN }}" >> $GITHUB_ENV
+          echo "PA_TOKEN=${{ secrets.PA_TOKEN }}" >> $GITHUB_ENV
 
       - uses: r-lib/actions/setup-r@master
         with:
