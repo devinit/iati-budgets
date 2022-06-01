@@ -8,7 +8,7 @@ on:
 
 jobs:
   generate-data:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
 
@@ -16,7 +16,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          brew install openssl curl
+          sudo apt-get install libcurl4-openssl-dev
 
       - name: set env
         run: |
