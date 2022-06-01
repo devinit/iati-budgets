@@ -50,6 +50,6 @@ while(length(docs)==1000){
 }
 
 
-save(results_list, file=paste0(filename,".RData"))
+save(results_list, file=paste0(filename,".RDa"))
 
 # We now have a dataset of iati-identifiers with their budget information for all budgets 2021 onwards.
