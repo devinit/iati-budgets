@@ -30,7 +30,7 @@ api_url_base = paste0(
   "rows=1000&start="
 )
 while(length(docs)==1000){
-  print("got into loop")
+  if (nchar(api_key)==32){print("got into loop with api key")}else{print("no api")}
   Sys.sleep(0.2)
   #message(start_num)
   req = GET(
