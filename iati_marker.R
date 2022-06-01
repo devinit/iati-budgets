@@ -30,6 +30,7 @@ api_url_base = paste0(
   "rows=1000&start="
 )
 while(length(docs)==1000){
+  print("got into loop")
   Sys.sleep(0.2)
   #message(start_num)
   req = GET(
