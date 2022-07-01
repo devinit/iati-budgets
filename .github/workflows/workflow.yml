@@ -2,9 +2,9 @@ name: Take a snapshot of budget data
 
 on:
   # Run every day at 12am
-  schedule:
-    - cron: "0 0 * * *"
-  # workflow_dispatch:
+  # schedule:
+  #   - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
   generate-data:
