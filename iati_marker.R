@@ -31,7 +31,7 @@ api_url_base = paste0(
 )
 while(length(docs)==1000){
   if (nchar(api_key)==32){print("got into loop with api key")}else{print("no api")}
-  Sys.sleep(0.2)
+  Sys.sleep(1)
   #message(start_num)
   req = GET(
     URLencode(paste0(api_url_base, format(start_num, scientific=F))),
