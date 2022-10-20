@@ -23,11 +23,11 @@ jobs:
         run: |
           echo "PA_TOKEN=${{ secrets.PA_TOKEN }}" >> $GITHUB_ENV
 
-      - uses: r-lib/actions/setup-r@master
+      - uses: r-lib/actions/setup-r@main
         with:
           r-version: 'release'
 
-      - uses: r-lib/actions/setup-pandoc@master
+      - uses: r-lib/actions/setup-pandoc@main
 
       - name: Run budget data script
         run: |
